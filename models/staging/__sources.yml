@@ -2,7 +2,7 @@ version: 2
 
 sources:
   - name: jaffle_shop
-    database: raw
+    database: dbt_mb
     schema: jaffle_shop
     description: E-commerce data
     tables:
