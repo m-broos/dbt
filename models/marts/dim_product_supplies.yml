@@ -1,0 +1,40 @@
+models:
+  - name: dim_product_supplies
+    access: public
+    group: product
+    config:
+      contract:
+        enforced: true
+    columns:
+      - name: product_id
+        data_type: varchar
+        constraints:
+          - type: not_null
+      - name: product_name
+        data_type: varchar
+        constraints:
+          - type: not_null
+      - name: product_type
+        data_type: varchar
+        constraints:
+          - type: not_null
+      - name: product_description
+        data_type: varchar
+      - name: product_price
+        data_type: int
+        constraints:
+          - type: not_null
+      - name: is_food_item
+        data_type: boolean
+        constraints:
+          - type: not_null
+      - name: is_drink_item
+        data_type: boolean
+        constraints:
+          - type: not_null
+      - name: supply_cost
+        data_type: number
+        constraints:
+          - type: not_null                 
+
+          
