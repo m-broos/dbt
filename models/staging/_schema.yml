@@ -24,12 +24,18 @@ models:
           - not_null
           - unique
   - name: stg_products
+    access: private
+    config:
+      group: product
     columns:
       - name: product_id
         tests:
           - not_null
           - unique
   - name: stg_supplies
+    access: protected
+    config:
+      group: product
     columns:
       - name: supply_uuid
         tests:

@@ -1,5 +1,7 @@
 models:
   - name: dim_product_supplies
+    access: public
+    group: product
     config:
       contract:
         enforced: true
