@@ -1,10 +1,10 @@
 models:
   - name: dim_product_supplies
-    access: public
-    group: product
     config:
       contract:
         enforced: true
+      access: public
+      group: product
     columns:
       - name: product_id
         data_type: varchar
@@ -35,6 +35,4 @@ models:
       - name: supply_cost
         data_type: number
         constraints:
-          - type: not_null                 
-
-          
+          - type: not_null

@@ -1,11 +1,15 @@
 groups:
   - name: finance
-    owner: 
+    owner:
       name: me
       email: me@me.me
-      github: finance-data-team
+    config:
+      meta:
+        github: finance-data-team
   - name: product
     owner:
-      name: you    
+      name: you
       email: you@you.yo
-      github: product-data-team
+    config:
+      meta:
+        github: product-data-team
