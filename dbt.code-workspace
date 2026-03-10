@@ -1,0 +1,9 @@
+{
+	"folders": [
+		{
+			"name": "dbt",
+			"path": "."
+		}
+	],
+	"settings": {}
+}

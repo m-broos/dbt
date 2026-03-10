@@ -1,0 +1,17 @@
+sources:
+  - name: snp_landing_zone
+    description: "Landing zone for sap data, which is extracted with SNP Glue and pushed directly to Snowflake tables"
+    schema: RAW_SAP_60_010
+
+    tables:
+      - name: z_glue_t001
+
+  - name: external_stages_sources
+    description: "External Stages Sources in Snowflake"
+    schema: EXTERNAL_STAGES
+
+    tables:
+      - name: gcs_stage_dataservices
+      - name: gcs_stage_theobald
+      - name: gcs_stage_snpglue
+      - name: gcs_stage_wcmofizz

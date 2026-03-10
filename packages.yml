@@ -6,4 +6,6 @@ packages:
   - package: tnightengale/dbt_meta_testing
     version: 0.3.6
   - package: metaplane/dbt_expectations
-    version: 0.10.9  
+    version: 0.10.9
+  - package: dbt-labs/codegen
+    version: 0.13.1    

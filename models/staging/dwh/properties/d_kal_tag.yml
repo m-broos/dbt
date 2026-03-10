@@ -1,0 +1,21 @@
+# models/staging/dwh/properties/d_kal_tag.yml
+
+models:
+  - name: d_kal_tag
+    description: ""
+    config: 
+      meta:
+        source_owner: "**[CCP](https://server.local/details/product/PROD27)**"
+    columns:
+      - name: kal_tag_id
+        data_type: date
+        description: "{{ doc('co_kal_tag_id') }}"
+      - name: wtag_id
+        data_type: number(38,0)
+        description: "{{ doc('co_wtag_id') }}"
+      - name: erfa_wo_id
+        data_type: varchar(11)
+        description: "{{ doc('co_erfa_wo_id') }}"
+      - name: kal_tag_txt
+        data_type: varchar(11)
+        description: "{{ doc('co_kal_tag_txt') }}"

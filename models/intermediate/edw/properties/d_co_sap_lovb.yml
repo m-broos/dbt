@@ -1,0 +1,21 @@
+# models/intermediate/edw/properties/d_co_sap_lovb.yml
+
+models:
+  - name: d_co_sap_lovb
+    description: "SAP BW Stammdaten zum Logistikvertriebsbereich - SAP BW masterdata for logistics sales area"
+    config:
+      meta:
+        valid_from_column: 'dwh_guelt_von'
+    columns:
+      - name: sap_lovb_id
+        description: "{{ doc('co_sap_lovb_id') }}"
+      - name: sap_lovb_nr
+        description: "{{ doc('sum_ma_ber_nr') }}"
+      - name: sap_lovb_txt
+        description: "{{ doc('sum_ma_ber_txt') }}"
+      - name: sap_lovb_kurztxt
+        description: "{{ doc('co_sap_lovb_kurztxt') }}"
+      - name: dwh_guelt_von
+        description: "{{ doc('co_dwh_guelt_von') }}"
+      - name: co_is_deleted
+        description: "{{ doc('co_is_deleted') }}"

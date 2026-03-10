@@ -1,0 +1,69 @@
+# models/staging/dwh/properties/lu_d_kal_tag.yml
+
+models:
+  - name: lu_d_kal_tag
+    description: "Lookup Tabelle für Kalendertage (Business Calendar)"
+    config: 
+      meta:
+        source_owner: "**[CCP](https://server.local/details/product/PROD27)**"
+    columns:
+      - name: kal_tag_id
+        data_type: date
+        description: "{{ doc('co_kal_tag_id') }}"
+      - name: wtag_id
+        data_type: number(38,0)
+        description: "{{ doc('co_wtag_id') }}"
+      - name: erfa_wo_id
+        data_type: varchar(11)
+        description: "{{ doc('co_erfa_wo_id') }}"
+      - name: kal_tag_txt
+        data_type: varchar(11)
+        description: "{{ doc('co_kal_tag_txt') }}"
+      - name: kal_mon_id
+        data_type: varchar(8)
+        description: "{{ doc('co_kal_mon_id') }}"
+      - name: mon_nr
+        data_type: varchar(2)
+        description: "{{ doc('co_mon_nr') }}"
+      - name: kal_wo_id
+        data_type: varchar(8)
+        description: "{{ doc('co_kal_wo_id') }}"
+      - name: qurt_id
+        data_type: varchar(7)
+        description: "{{ doc('co_qurt_id') }}"
+      - name: jhr_id
+        data_type: number(38,0)
+        description: "{{ doc('co_jhr_id') }}"
+      - name: log_jhr
+        data_type: number(38,0)
+        description: "{{ doc('co_log_jhr') }}"
+      - name: log_qurt
+        data_type: number(38,0)
+        description: "{{ doc('co_log_qurt') }}"
+      - name: log_mon
+        data_type: number(38,0)
+        description: "{{ doc('co_log_mon') }}"
+      - name: log_wo
+        data_type: number(38,0)
+        description: "{{ doc('co_log_wo') }}"
+      - name: kal_wo_otw_id
+        data_type: varchar(8)
+        description: "{{ doc('co_kal_wo_otw_id') }}"
+      - name: log_wo_otw
+        data_type: number(38,0)
+        description: "{{ doc('co_log_wo_otw') }}"
+      - name: vj_kal_wo_tag_id
+        data_type: date
+        description: "{{ doc('co_vj_kal_wo_tag_id') }}"
+      - name: vj_kal_wo_tag_txt
+        data_type: varchar(11)
+        description: "{{ doc('co_vj_kal_wo_tag_txt') }}"
+      - name: h_jhr_id
+        data_type: varchar(8)
+        description: "{{ doc('co_h_jhr_id') }}"
+      - name: log_h_jhr
+        data_type: number(38,0)
+        description: "{{ doc('co_log_h_jhr') }}"
+      - name: kal_teilwoche_id
+        data_type: varchar(11)
+        description: "{{ doc('co_kal_teilwoche_id') }}"

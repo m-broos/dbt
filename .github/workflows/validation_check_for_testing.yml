@@ -1,0 +1,83 @@
+name: validation_check_for_testing
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review, converted_to_draft]
+    branches:
+      - testing # Runs only when merging into 'testing' branch
+
+jobs:
+  validate-branch-name:
+    runs-on: ubuntu-latest
+    steps:
+      # 1. Check the branch name
+      - name: Validate branch name
+        run: |
+          # Extract the source branch name from the PR
+          BRANCH_NAME="${{ github.event.pull_request.head.ref }}"
+          echo "🔹 Pull Request from branch: $BRANCH_NAME"
+
+          # Check if branch starts with "CCP" or "Hotfix"
+          if [[ "$BRANCH_NAME" =~ ^(CCP|Hotfix) ]]; then
+            echo "✅ Branch name is valid."
+          else
+            echo "❌ Error: Branch name must start with 'CCP' or 'Hotfix'."
+            exit 1
+          fi
+
+  check-for-duplicate-doc-blocks:
+    runs-on: ubuntu-latest
+    steps:
+      # 1. Checkout the repository
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # 2. Set up Python
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.x"
+
+      # 3. Check for duplicate documentation blocks
+      - name: Check for duplicate doc blocks
+        run: |
+          echo "🔹 Checking for duplicate dbt documentation blocks..."
+          python scripts/check_columns_files_for_duplicates.py
+
+  check-for-utf-8-issues:
+    runs-on: ubuntu-latest
+    steps:
+      # 1. Checkout the repository
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # 2. Set up Python
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.x"
+
+      # 3. Check for UTF-8 encoding issues
+      - name: Check for UTF-8 encoding issues
+        run: |
+          echo "🔹 Checking for UTF-8 encoding issues..."
+          python scripts/check_utf_8_issues.py
+
+  check-column-doc-existence:
+    runs-on: ubuntu-latest
+    steps:
+      # 1. Checkout the repository
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # 2. Set up Python
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.x"
+
+      # 3. Check if documentation of columns exists
+      - name: Check if documentation of columns exists
+        run: |
+          echo "🔹 Checking if documentation of columns exists ..."
+          python scripts/check_column_doc_existence.py

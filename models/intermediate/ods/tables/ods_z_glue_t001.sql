@@ -1,0 +1,107 @@
+-- -------------------------------------------------------------------------
+-- Model Name   : ods_z_glue_t001
+-- File         : models/intermediate/ods/tables/ods_z_glue_t001.sql
+-- Layer        : ods
+-- Pipeline     : z_glue_t001
+-- Description  : Delta ODS for for ods_z_glue_t001
+-- Author       : Data Engineer
+-- -------------------------------------------------------------------------
+
+{{
+  config(
+    materialized='scd1_cdc_hard_delete_strict',
+    unique_key=['mandt','bukrs'],
+    meta={
+      'cdc_flag_column': 'gldelflag',
+      'source_model': 'stag_z_glue_t001'
+    }
+  )
+}}
+
+select
+    mandt,
+    bukrs,
+    glrequest,
+    butxt,
+    ort01,
+    land1,
+    waers,
+    spras,
+    ktopl,
+    waabw,
+    periv,
+    kokfi,
+    rcomp,
+    adrnr,
+    stceg,
+    fikrs,
+    xfmco,
+    xfmcb,
+    xfmca,
+    txjcd,
+    fmhrdate,
+    xtemplt,
+    transit_plant,
+    buvar,
+    fdbuk,
+    xfdis,
+    xvalv,
+    xskfn,
+    kkber,
+    xmwsn,
+    mregl,
+    xgsbe,
+    xgjrv,
+    xkdft,
+    xprod,
+    xeink,
+    xjvaa,
+    xvvwa,
+    xslta,
+    xfdmm,
+    xfdsd,
+    xextb,
+    ebukr,
+    ktop2,
+    umkrs,
+    bukrs_glob,
+    fstva,
+    opvar,
+    xcovr,
+    txkrs,
+    wfvar,
+    xbbbf,
+    xbbbe,
+    xbbba,
+    xbbko,
+    xstdt,
+    mwskv,
+    mwska,
+    impda,
+    xnegp,
+    xkkbi,
+    wt_newwt,
+    pp_pdate,
+    infmt,
+    fstvare,
+    kopim,
+    dkweg,
+    offsacct,
+    bapovar,
+    xcos,
+    xcession,
+    xsplt,
+    surccm,
+    dtprov,
+    dtamtc,
+    dttaxc,
+    dttdsp,
+    dtaxr,
+    xvatdate,
+    pst_per_var,
+    xbbsc,
+    f_obsolete,
+    fm_derive_acc,
+    gldelflag,
+    glchangetime
+from {{ ref('stag_z_glue_t001') }}

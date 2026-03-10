@@ -1,0 +1,10 @@
+sources:
+  - name: dwh_dwh
+    tables:
+      - name: d_kal_mon
+        description: ""
+      - name: d_kal_tag
+        description: ""
+      - name: lu_d_kal_tag
+        description: ""
+     

@@ -1,0 +1,76 @@
+# models/intermediate/edw/properties/f_co_sap_paid_fi_items.yml
+
+models:
+  - name: f_co_sap_paid_fi_items
+    description: "Fact table for SAP paid FI items (imported from source table)"
+    columns:
+      - name: sap_bukrs_id
+        description: "{{ doc('co_sap_bukrs_id') }}"
+      - name: sap_kreditoren_id
+        description: "{{ doc('co_sap_kreditoren_id') }}"
+      - name: lief_id
+        description: "{{ doc('wcm_lief_id') }}"
+      - name: bukrs
+        description: "{{ doc('sb_bukrs') }}"
+      - name: wbeln
+        description: "{{ doc('sb_wbeln') }}"
+      - name: lifre
+        description: "{{ doc('sb_lifre') }}"
+      - name: zzax_ilnnr
+        description: "{{ doc('sb_zzax_ilnnr') }}"
+      - name: zzaq_eiww
+        description: "{{ doc('sb_zzaq_eiww') }}"
+      - name: wfdat
+        description: "{{ doc('sb_wfdat') }}"
+      - name: bldat
+        description: "{{ doc('sb_bldat') }}"
+      - name: xblnr
+        description: "{{ doc('sb_xblnr') }}"
+      - name: kidno
+        description: "{{ doc('sb_kidno') }}"
+      - name: netwr
+        description: "{{ doc('sb_netwr') }}"
+      - name: mwsbk
+        description: "{{ doc('sb_mwsbk') }}"
+      - name: brtwr
+        description: "{{ doc('sb_brtwr') }}"
+      - name: zz_faedt
+        description: "{{ doc('sb_zz_faedt') }}"
+      - name: augdt
+        description: "{{ doc('sb_augdt') }}"
+      - name: ekkol
+        description: "{{ doc('sb_ekkol') }}"
+      - name: zbd1t
+        description: "{{ doc('sb_zbd1t') }}"
+      - name: zz_zbd1td
+        description: "{{ doc('sb_zz_zbd1td') }}"
+      - name: skonto_prz
+        description: "{{ doc('sb_skonto_prz') }}"
+      - name: zahltag
+        description: "{{ doc('sb_zahltag') }}"
+      - name: zwels
+        description: "{{ doc('sb_zwels') }}"
+      - name: uzawe
+        description: "{{ doc('sb_uzawe') }}"
+      - name: zz_vat_rate
+        description: "{{ doc('sb_zz_vat_rate') }}"
+      - name: zzab_utp_kz
+        description: "{{ doc('sb_zzab_utp_kz') }}"
+      - name: zzab_basisdt_tsa
+        description: "{{ doc('sb_zzab_basisdt_tsa') }}"
+      - name: dss_hash_key
+        description: "{{ doc('co_dss_hash_key') }}"
+      - name: dss_hash_diff
+        description: "{{ doc('co_dss_hash_diff') }}"
+      - name: dss_row_number
+        description: "{{ doc('co_dss_row_number') }}"
+      - name: dss_file_name
+        description: "{{ doc('co_dss_file_name') }}"
+      - name: dss_load_date
+        description: "{{ doc('co_dss_load_date') }}"
+      - name: dss_last_modified
+        description: "{{ doc('co_dss_last_modified') }}"
+      - name: dss_ctm_run_id
+        description: "{{ doc('co_dss_ctm_run_id') }}"
+      - name: dss_row_status
+        description: "{{ doc('co_dss_row_status') }}"

@@ -1,0 +1,118 @@
+# models/staging/stag/properties/raw_co_sap_open_fi_items.yml
+
+models:
+  - name: raw_co_sap_open_fi_items
+    description: "Raw table for SAP open FI items"
+    config:
+      contract:
+        enforced: true
+      meta:
+        source_owner: "**[PROD52](https://server.local/details/product/PROD52)**"
+        source_system: "SAP"
+        delete: true
+    columns:
+      - name: dss_load_date
+        data_type: date
+        description: "{{ doc('co_dss_load_date') }}"
+      - name: dss_row_number
+        data_type: number(38, 0)
+        description: "{{ doc('co_dss_row_number') }}"
+      - name: dss_file_name
+        data_type: varchar(255)
+        description: "{{ doc('co_dss_file_name') }}"
+      - name: dss_file_content_key
+        data_type: varchar(255)
+        description: "{{ doc('co_dss_file_content_key') }}"
+      - name: dss_last_modified
+        data_type: timestamp_ntz
+        description: "{{ doc('co_dss_last_modified') }}"
+      - name: dss_ctm_run_id
+        data_type: varchar(10)
+        description: "{{ doc('co_dss_ctm_run_id') }}"
+      - name: bukrs
+        data_type: varchar(4)
+        description: "{{ doc('sb_bukrs') }}"
+      - name: gjahr
+        data_type: varchar(4)
+        description: "{{ doc('sb_gjahr') }}"
+      - name: belnr
+        data_type: varchar(10)
+        description: "{{ doc('sb_belnr') }}"
+      - name: lifnr
+        data_type: varchar(10)
+        description: "{{ doc('sb_lifnr') }}"
+      - name: empfb
+        data_type: varchar(10)
+        description: "{{ doc('sb_empfb') }}"
+      - name: warenlieferant
+        data_type: varchar(10)
+        description: "{{ doc('sb_ilnnr') }}"
+      - name: warenlieferant_gln
+        data_type: varchar(13)
+        description: "{{ doc('sb_zzax_ilnnr') }}"
+      - name: zzaq_eiww
+        data_type: varchar(5)
+        description: "{{ doc('sb_zzaq_eiww') }}"
+      - name: kunre
+        data_type: varchar(10)
+        description: "{{ doc('sb_kunre') }}"
+      - name: budat
+        data_type: varchar(10)
+        description: "{{ doc('sb_budat') }}"
+      - name: bldat
+        data_type: varchar(10)
+        description: "{{ doc('sb_bldat') }}"
+      - name: xblnr
+        data_type: varchar(20)
+        description: "{{ doc('sb_xblnr') }}"
+      - name: kidno
+        data_type: varchar(11)
+        description: "{{ doc('sb_kidno') }}"
+      - name: blart
+        data_type: varchar(2)
+        description: "{{ doc('sb_blart') }}"
+      - name: zterm
+        data_type: varchar(4)
+        description: "{{ doc('zterm') }}"
+      - name: zfbdt
+        data_type: varchar(10)
+        description: "{{ doc('sb_zfbdt') }}"
+      - name: zbd1t
+        data_type: varchar(10)
+        description: "{{ doc('sb_zbd1t') }}"
+      - name: zlspr
+        data_type: varchar(1)
+        description: "{{ doc('sb_zlspr') }}"
+      - name: netwr
+        data_type: varchar(20)
+        description: "{{ doc('sb_netwr') }}"
+      - name: mwsbp
+        data_type: varchar(20)
+        description: "{{ doc('sb_mwsbp') }}"
+      - name: brtwr
+        data_type: varchar(20)
+        description: "{{ doc('sb_brtwr') }}"
+      - name: zahlbetrag
+        data_type: varchar(20)
+        description: "{{ doc('zahlbetrag') }}"
+      - name: zahldatum
+        data_type: varchar(10)
+        description: "{{ doc('sb_zahldatum') }}"
+      - name: zwels
+        data_type: varchar(1)
+        description: "{{ doc('sb_zwels') }}"
+      - name: blart_rzf
+        data_type: varchar(2)
+        description: "{{ doc('sb_blart_rzf') }}"
+      - name: ekkol
+        data_type: varchar(2)
+        description: "{{ doc('sb_ekkol') }}"
+      - name: tax_rate
+        data_type: varchar(4)
+        description: "{{ doc('sb_zz_vat_rate') }}"
+      - name: utp_kz
+        data_type: varchar(1)
+        description: "{{ doc('sb_zzab_utp_kz') }}"
+      - name: basedate_tsa
+        data_type: varchar(10)
+        description: "{{ doc('sb_zzab_basisdt_tsa') }}"

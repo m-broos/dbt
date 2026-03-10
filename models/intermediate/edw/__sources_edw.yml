@@ -1,0 +1,41 @@
+sources:
+  - name: edw
+    description: "EDW tables that are used as sources. This is required in the following
+      use cases:\n1. Avoid cyclic dependencies, if a table is more than once in a
+      pipeline.\n2. Use a table that is loaded by a pipeline which in not migrated
+      to DBT yet.\n"
+    tables:
+      - name: d_co_kpi_nonfi
+        description: ""
+      - name: f_co_sap_ekko
+        description: "Fact table for EKKO from parquet file in EDW"
+      - name: h_co_sap_skat
+        description: ""
+      - name: h_co_sum_mst_openinghours
+        description: ""
+      - name: m_co_sap_status_acdoca
+        description: ""
+      - name: m_co_tm1_nonfi_vp
+        description: "Metadata table for CO_TM1_NONFI_VP"
+      - name: sd_co_invest_durch
+        description: ""
+      - name: sd_co_py_boc_backprogramm
+        description: ""
+      - name: sd_co_py_boc_programm
+        description: ""
+      - name: sd_inv_kategorie
+        description: ""
+      - name: sd_kst_umbs_typ
+        description: ""
+      - name: sd_py_boc_reinigungsprogramm
+        description: ""
+      - name: sd_py_boc_reinigungsprogramm_oberkat
+        description: ""
+      - name: sd_sap_auftr_art
+        description: ""
+      - name: sd_werbe_kz_art
+        description: ""
+      - name: sd_wkz_art_oberkat
+        description: ""
+      - name: h_co_sap_saknr_ska1
+        description: ""

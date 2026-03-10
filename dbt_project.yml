@@ -27,3 +27,101 @@ models:
       +materialized: table
 flags:
   require_generic_test_arguments_property: true
+
+
+
+# # Name your project! Project names should contain only lowercase characters
+# # and underscores. A good package name should reflect your organization's
+# # name or the intended use of these models
+# name: 'core_platform'
+# version: '1.0.0'
+# config-version: 2
+
+# # This setting configures which "profile" dbt uses for this project.
+# profile: 'default'
+
+# # While using the dbt Cloud CLI, this setting links your local project to the dbt Cloud project.
+# dbt-cloud:
+#   project-id: 175956220183089
+
+# # These configurations specify where dbt should look for different types of files.
+# # The `model-paths` config, for example, states that models in this project can be
+# # found in the "models/" directory. You probably won't need to change these!
+# model-paths: ["models", "scripts/helper_models"]
+# analysis-paths: ["analyses"]
+# test-paths: ["tests"]
+# seed-paths: ["seeds"]
+# macro-paths: ["macros"]
+# snapshot-paths: ["snapshots"]
+# docs-paths: ["docs"]
+
+# target-path: "target"  # directory which will store compiled SQL files
+# clean-targets:         # directories to be removed by `dbt clean`
+#   - "target"
+#   - "dbt_packages"
+
+# vars:
+#   ctm_run_id: "12345"
+
+# # Configuring models
+# # Full documentation: https://docs.getdbt.com/docs/configuring-models
+
+# # In dbt, the default materialization for a model is a view. This means, when you run
+# # dbt run or dbt build, all of your models will be built as a view in your data platform.
+# # The configuration below will override this setting for models in the example folder to
+# # instead be materialized as tables. Any models you add to the root of the models folder will
+# # continue to be built as views. These settings can be overridden in the individual model files
+# # using the `{{ config(...) }}` macro.
+
+# models:
+#   +on_schema_change: append_new_columns
+#   +persist_docs:
+#     relation: true
+#     columns: true
+#   +transient: false
+#   PRODUCT_CO:
+#     intermediate:
+#       edw:
+#         +schema: edw
+#       x:
+#         +schema: x
+#     marts:
+#       co_out:
+#         +schema: co_out
+#       co_out_general:
+#         +schema: co_out_general
+#       dma:
+#         +schema: dma
+#       handel_int:
+#         +schema: handel_int
+#       msi_co:
+#         +schema: msi_co
+#       msi_ocean:
+#         +schema: msi_ocean
+#       pbi_connect:
+#         +schema: pbi_connect
+#       tbm_concert:
+#         +schema: tbm_concert
+#       tm1_concert:
+#         +schema: tm1_concert
+#       wcm_co:
+#         +schema: wcm_co
+#       xls_write:
+#         +schema: xls_write
+#     staging:
+#       agg_dwh:
+#         +schema: agg_dwh
+#       bon_dma_dwh:
+#         +schema: bon_dma_dwh
+#       bon_dwh:
+#         +schema: bon_dwh
+#       co_in:
+#         +schema: co_in
+#       dma_dwh:
+#         +schema: dma_dwh
+#       dwh_dwh:
+#         +schema: dwh_dwh
+#       edw_dwh:
+#         +schema: edw_dwh
+#       stag:
+#         +schema: stag

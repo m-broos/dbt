@@ -1,0 +1,177 @@
+# models/intermediate/ods/properties/ods_z_glue_t001.yml
+
+models:
+  - name: ods_z_glue_t001
+    description: "ODS table from SAP Extractor Glue for T001 (Company Codes)"
+    config:
+      meta:
+        delete: true
+    columns:
+      - name: mandt
+        description: ""
+      - name: bukrs
+        description: ""
+      - name: glrequest
+        description: ""
+      - name: butxt
+        description: ""
+      - name: ort01
+        description: ""
+      - name: land1
+        description: ""
+      - name: waers
+        description: ""
+      - name: spras
+        description: ""
+      - name: ktopl
+        description: ""
+      - name: waabw
+        description: ""
+      - name: periv
+        description: ""
+      - name: kokfi
+        description: ""
+      - name: rcomp
+        description: ""
+      - name: adrnr
+        description: ""
+      - name: stceg
+        description: ""
+      - name: fikrs
+        description: ""
+      - name: xfmco
+        description: ""
+      - name: xfmcb
+        description: ""
+      - name: xfmca
+        description: ""
+      - name: txjcd
+        description: ""
+      - name: fmhrdate
+        description: ""
+      - name: xtemplt
+        description: ""
+      - name: transit_plant
+        description: ""
+      - name: buvar
+        description: ""
+      - name: fdbuk
+        description: ""
+      - name: xfdis
+        description: ""
+      - name: xvalv
+        description: ""
+      - name: xskfn
+        description: ""
+      - name: kkber
+        description: ""
+      - name: xmwsn
+        description: ""
+      - name: mregl
+        description: ""
+      - name: xgsbe
+        description: ""
+      - name: xgjrv
+        description: ""
+      - name: xkdft
+        description: ""
+      - name: xprod
+        description: ""
+      - name: xeink
+        description: ""
+      - name: xjvaa
+        description: ""
+      - name: xvvwa
+        description: ""
+      - name: xslta
+        description: ""
+      - name: xfdmm
+        description: ""
+      - name: xfdsd
+        description: ""
+      - name: xextb
+        description: ""
+      - name: ebukr
+        description: ""
+      - name: ktop2
+        description: ""
+      - name: umkrs
+        description: ""
+      - name: bukrs_glob
+        description: ""
+      - name: fstva
+        description: ""
+      - name: opvar
+        description: ""
+      - name: xcovr
+        description: ""
+      - name: txkrs
+        description: ""
+      - name: wfvar
+        description: ""
+      - name: xbbbf
+        description: ""
+      - name: xbbbe
+        description: ""
+      - name: xbbba
+        description: ""
+      - name: xbbko
+        description: ""
+      - name: xstdt
+        description: ""
+      - name: mwska
+        description: ""
+      - name: impda
+        description: ""
+      - name: xnegp
+        description: ""
+      - name: xkkbi
+        description: ""
+      - name: wt_newwt
+        description: ""
+      - name: pp_pdate
+        description: ""
+      - name: infmt
+        description: ""
+      - name: fstvare
+        description: ""
+      - name: kopim
+        description: ""
+      - name: dkweg
+        description: ""
+      - name: offsacct
+        description: ""
+      - name: bapovar
+        description: ""
+      - name: xcos
+        description: ""
+      - name: xcession
+        description: ""
+      - name: xsplt
+        description: ""
+      - name: surccm
+        description: ""
+      - name: dtprov
+        description: ""
+      - name: dtamtc
+        description: ""
+      - name: dttaxc
+        description: ""
+      - name: dttdsp
+        description: ""
+      - name: dtaxr
+        description: ""
+      - name: xvatdate
+        description: ""
+      - name: pst_per_var
+        description: ""
+      - name: xbbsc
+        description: ""
+      - name: f_obsolete
+        description: ""
+      - name: fm_derive_acc
+        description: ""
+      - name: gldelflag
+        description: ""
+      - name: glchangetime
+        description: ""

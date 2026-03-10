@@ -1,0 +1,15 @@
+# Python virtual environments
+.venv/
+
+# dbt artifacts
+dbt_modules/
+dbt_packages/
+dbt_internal_packages/
+logs/
+target/
+reports/
+macros/
+
+# Mac/Windows system files
+.DS_Store
+Thumbs.db

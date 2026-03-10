@@ -3,3 +3,9 @@
 target/
 dbt_packages/
 logs/
+dbt_internal_packages/
+.vscode/
+package-lock.yml
+scripts/_output/
+__pycache__/
+*.py[cod]

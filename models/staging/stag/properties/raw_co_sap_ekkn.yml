@@ -1,0 +1,43 @@
+# models/staging/stag/properties/raw_co_sap_ekkn.yml
+
+models:
+  - name: raw_co_sap_ekkn
+    description: "Fact table for EKKN from GCP bucket parquet file"
+    config:
+      meta:
+        delete: true
+    columns:
+      - name: dss_ctm_run_id
+        description: "{{ doc('co_dss_ctm_run_id') }}"
+      - name: dss_file_content_key
+        description: "{{ doc('co_dss_file_content_key') }}"
+      - name: dss_file_name
+        description: "{{ doc('co_dss_file_name') }}"
+      - name: dss_file_start_scan_time
+        description: "{{ doc('co_dss_file_start_scan_time') }}"
+      - name: dss_file_timestamp
+        description: "{{ doc('co_file_timestamp') }}"
+      - name: dss_last_modified
+        description: "{{ doc('co_dss_last_modified') }}"
+      - name: dss_row_number
+        description: "{{ doc('co_dss_row_number') }}"
+      - name: ebeln
+        description: "{{ doc('co_ebeln') }}"
+      - name: ebelp
+        description: "{{ doc('co_ebelp') }}"
+      - name: grant_nbr
+        description: "{{ doc('co_grant_nbr') }}"
+      - name: kokrs
+        description: "{{ doc('co_kokrs') }}"
+      - name: kostl
+        description: "{{ doc('co_kostl') }}"
+      - name: load_timestamp
+        description: "{{ doc('co_load_timestamp') }}"
+      - name: prctr
+        description: "{{ doc('co_prctr') }}"
+      - name: ps_psp_pnr
+        description: "{{ doc('co_ps_psp_pnr') }}"
+      - name: sakto
+        description: "{{ doc('co_sakto') }}"
+      - name: wempf
+        description: "{{ doc('co_wempf') }}"

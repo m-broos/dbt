@@ -1,0 +1,18 @@
+# models/staging/dwh/properties/d_kal_mon.yml
+
+models:
+  - name: d_kal_mon
+    description: ""
+    config: 
+      meta:
+        source_owner: "**[CCP](https://server.local/details/product/PROD27)**"
+    columns:
+      - name: kal_mon_id
+        data_type: varchar(8)
+        description: "{{ doc('co_kal_mon_id') }}"
+      - name: qurt_id
+        data_type: varchar(7)
+        description: "{{ doc('co_qurt_id') }}"
+      - name: kal_mon_txt
+        data_type: varchar(10)
+        description: "{{ doc('co_kal_mon_txt') }}"

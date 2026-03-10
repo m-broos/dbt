@@ -1,0 +1,41 @@
+name: validation_check_for_integration
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review, converted_to_draft]
+    branches:
+      - integration # Runs only when merging into 'integration' branch
+
+jobs:
+  check-if-commits-are-in-testing:
+    runs-on: ubuntu-latest
+    steps:
+      # 1. Checkout the repository with full history
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # Fetches the full history
+          ref: ${{ github.event.pull_request.head.ref }} # Ensures the feature branch is checked out
+
+      # 2. Fetch all remote branches
+      - name: Fetch all branches
+        run: git fetch --all --prune
+
+      # 3. Verify if the latest commit of the feature branch is included in the testing branch history
+      - name: Verify release branch commit in testing branch
+        run: |
+          # Get the feature branch name
+          FEATURE_BRANCH=${{ github.event.pull_request.head.ref }}
+          echo "🔹 Feature Branch: $FEATURE_BRANCH"
+
+          # Get the latest commit of the feature branch
+          LATEST_COMMIT=$(git rev-parse origin/$FEATURE_BRANCH)
+          echo "🔹 Latest Commit in feature Branch: $LATEST_COMMIT"
+
+          # Check if the latest commit of the feature branch exists in the testing branch history
+          if git log origin/testing --pretty=format:"%H" | grep -q $LATEST_COMMIT; then
+            echo "✅ The latest commit from the feature branch is present in the testing branch history."
+          else
+            echo "❌ Error: The latest commit from the feature branch is NOT found in the testing branch history!"
+            exit 1
+          fi
